@@ -11,4 +11,4 @@ Features
 7. Streamlit, LangChain  and Groq/Gemini and OpenAI tools enable the system development
 
 Folder Structure
-<pre> AI_UseCase/ ├── app.py ├── requirements.txt ├── config/ │ └── config.py ├── models/ │ ├── llm.py │ └── embedings.py ├── utils/ │ └── helper_functions.py ├── uploads/ │ └── [Uploaded files go here] └── docs/ └── README.md </pre>
+<pre> ###  Project Folder Structure ``` AI_UseCase/ ├── app.py ├── requirements.txt ├── config/ │ └── config.py ├── models/ │ ├── llm.py │ └── embedings.py ├── utils/ │ └── helper_functions.py ├── uploads/ │ └── [Uploaded files go here] └── docs/ └── README.md ``` </pre>
