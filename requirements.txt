@@ -12,3 +12,4 @@ pypdf
 chromadb
 google-search-results
 tabulate
+matplotlib
