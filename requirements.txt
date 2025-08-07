@@ -1,0 +1,14 @@
+streamlit 
+langchain-openai 
+langchain-groq 
+langchain-google-genai 
+langchain-core
+torch
+python-dotenv
+nbformat
+duckduckgo-search==5.1.0
+langchain-community==0.2.7
+pypdf
+chromadb
+google-search-results
+tabulate
