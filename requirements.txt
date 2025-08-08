@@ -13,4 +13,3 @@ chromadb
 google-search-results
 tabulate
 sentence-transformers
-pysqlite3-binary

@@ -1,7 +1,4 @@
 # app.py
-__import__('pysqlite3')
-import sys
-sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
 import streamlit as st
 import os
 import sys
@@ -21,6 +18,7 @@ from langchain_core.documents import Document
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain_community.vectorstores import Chroma
 from langchain_community.embeddings import HuggingFaceEmbeddings
+from models.embeddings import get_embedding_model
 
 # Add the parent directory to the system path to find other modules
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
@@ -419,15 +417,6 @@ def chat_page():
                     docs = [Document(page_content=code_content, metadata={"source": uploaded_file.name})]
                     splits = text_splitter.split_documents(docs)
                     
-                    def get_embedding_model():
-                        model_name = "sentence-transformers/all-MiniLM-L6-v2"
-                        model_kwargs = {'device': 'cpu'}
-                        encode_kwargs = {'normalize_embeddings': False}
-                        return HuggingFaceEmbeddings(
-                            model_name=model_name,
-                            model_kwargs=model_kwargs,
-                            encode_kwargs=encode_kwargs
-                        )
 
                     embedding_model = get_embedding_model()
                     st.session_state.vectorstore = Chroma.from_documents(
