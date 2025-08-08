@@ -1,0 +1,2 @@
+libgomp1
+libpq-dev
